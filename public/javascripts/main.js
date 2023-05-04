@@ -282,7 +282,7 @@ function postAjax(data) {
 
     $.ajax({
 
-        url: "http://localhost:4000/post-test",
+        url: "https://workout-log-3n2u.onrender.com/post-test",
         data: data,
         contentType: "application/json",
 
@@ -300,7 +300,7 @@ function postAjax(data) {
 }
 async function getArray() {
     //check here for response error ??
-    const response = await fetch("../saved_workouts.json")
+    const response = await fetch("https://workout-log-3n2u.onrender.com/saved_workouts.json")
 
     data = await response.json();
     console.log(data);
