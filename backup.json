@@ -1,0 +1,582 @@
+{
+    "workout_list": [
+        {
+            "exercise_list": [
+                [
+                    {
+                        "name": "Deadlift",
+                        "type": "back",
+                        "sets": [
+                            172.5,
+                            155,
+                            155,
+                            155
+                        ],
+                        "set_quantity": [],
+                        "max": 265,
+                        "ten_max": 200,
+                        "modifier": 0
+                    },
+                    true
+                ],
+                [
+                    {
+                        "name": "Barbell Hold",
+                        "type": "back",
+                        "sets": [
+                            140,
+                            140,
+                            140
+                        ],
+                        "set_quantity": 3,
+                        "max": 150,
+                        "ten_max": 170,
+                        "modifier": 25
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Pendlay Row",
+                        "type": "back",
+                        "sets": [
+                            82.5,
+                            82.5,
+                            82.5
+                        ],
+                        "set_quantity": 3,
+                        "max": 130,
+                        "ten_max": 105,
+                        "modifier": 12.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Single Arm LP",
+                        "type": "back",
+                        "sets": [
+                            42.5,
+                            42.5,
+                            42.5
+                        ],
+                        "set_quantity": 3,
+                        "max": 100,
+                        "ten_max": 60,
+                        "modifier": 5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Concentration Curl",
+                        "type": "biceps",
+                        "sets": [
+                            20,
+                            20,
+                            20
+                        ],
+                        "set_quantity": 3,
+                        "max": 25,
+                        "ten_max": 25,
+                        "modifier": 2.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Single Leg Press",
+                        "type": "leg",
+                        "sets": [
+                            62.5,
+                            62.5,
+                            62.5
+                        ],
+                        "set_quantity": 3,
+                        "max": 90,
+                        "ten_max": 90,
+                        "modifier": 2.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Calf Raises",
+                        "type": "leg",
+                        "sets": [
+                            170,
+                            170,
+                            170
+                        ],
+                        "set_quantity": 3,
+                        "max": 90,
+                        "ten_max": 230,
+                        "modifier": 15
+                    },
+                    false
+                ]
+            ]
+        },
+        {
+            "exercise_list": [
+                [
+                    {
+                        "name": "Bench Press",
+                        "type": "chest",
+                        "sets": [
+                            110,
+                            97.5,
+                            97.5,
+                            97.5,
+                            97.5,
+                            97.5,
+                            97.5
+                        ],
+                        "set_quantity": [],
+                        "max": 145,
+                        "ten_max": 110,
+                        "modifier": 0
+                    },
+                    true
+                ],
+                [
+                    {
+                        "name": "Incline Bench Press",
+                        "type": "chest",
+                        "sets": [
+                            75,
+                            75,
+                            75
+                        ],
+                        "set_quantity": 3,
+                        "max": 130,
+                        "ten_max": 100,
+                        "modifier": 7.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Incline Dumbbell Bench",
+                        "type": "chest",
+                        "sets": [
+                            35,
+                            35,
+                            35
+                        ],
+                        "set_quantity": 3,
+                        "max": 40,
+                        "ten_max": 40,
+                        "modifier": 7.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Dumbbell Bench",
+                        "type": "chest",
+                        "sets": [
+                            40,
+                            40,
+                            40
+                        ],
+                        "set_quantity": 3,
+                        "max": 50,
+                        "ten_max": 50,
+                        "modifier": 5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "One Arm Tricep Pushdown",
+                        "type": "tricep",
+                        "sets": [
+                            17.5,
+                            17.5,
+                            17.5
+                        ],
+                        "set_quantity": 3,
+                        "max": 25,
+                        "ten_max": 25,
+                        "modifier": 0
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Cable Fly",
+                        "type": "chest",
+                        "sets": [
+                            17.5,
+                            17.5,
+                            17.5
+                        ],
+                        "set_quantity": 3,
+                        "max": 25,
+                        "ten_max": 25,
+                        "modifier": 0
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Plank",
+                        "type": "abs",
+                        "sets": [
+                            95,
+                            95,
+                            95
+                        ],
+                        "set_quantity": 3,
+                        "max": 100,
+                        "ten_max": 140,
+                        "modifier": 0
+                    },
+                    false
+                ]
+            ]
+        },
+        {
+            "exercise_list": [
+                [
+                    {
+                        "name": "Competition Squat",
+                        "type": "leg",
+                        "sets": [
+                            165,
+                            147.5,
+                            147.5,
+                            147.5,
+                            147.5,
+                            147.5,
+                            147.5
+                        ],
+                        "set_quantity": [],
+                        "max": 220,
+                        "ten_max": 182.5,
+                        "modifier": 0
+                    },
+                    true
+                ],
+                [
+                    {
+                        "name": "Leg Press",
+                        "type": "leg",
+                        "sets": [
+                            182.5,
+                            182.5,
+                            182.5
+                        ],
+                        "set_quantity": 3,
+                        "max": 90,
+                        "ten_max": 270,
+                        "modifier": 0
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Leg Extension",
+                        "type": "leg",
+                        "sets": [
+                            70,
+                            70,
+                            70
+                        ],
+                        "set_quantity": 3,
+                        "max": 90,
+                        "ten_max": 100,
+                        "modifier": 2.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Ham Curl",
+                        "type": "leg",
+                        "sets": [
+                            52.5,
+                            52.5,
+                            52.5
+                        ],
+                        "set_quantity": 3,
+                        "max": 90,
+                        "ten_max": 65,
+                        "modifier": 7.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Calf Raises",
+                        "type": "leg",
+                        "sets": [
+                            145,
+                            145,
+                            145
+                        ],
+                        "set_quantity": 3,
+                        "max": 90,
+                        "ten_max": 210,
+                        "modifier": 2.5
+                    },
+                    false
+                ]
+            ]
+        },
+        {
+            "exercise_list": [
+                [
+                    {
+                        "name": "Pendlay Row",
+                        "type": "back",
+                        "sets": [
+                            82.5,
+                            82.5,
+                            82.5
+                        ],
+                        "set_quantity": 3,
+                        "max": 130,
+                        "ten_max": 105,
+                        "modifier": 12.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Single Arm LP",
+                        "type": "back",
+                        "sets": [
+                            42.5,
+                            42.5,
+                            42.5
+                        ],
+                        "set_quantity": 3,
+                        "max": 100,
+                        "ten_max": 60,
+                        "modifier": 5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Single Arm Row",
+                        "type": "back",
+                        "sets": [
+                            42.5,
+                            42.5,
+                            42.5
+                        ],
+                        "set_quantity": 3,
+                        "max": 100,
+                        "ten_max": 60,
+                        "modifier": 2.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Concentration Curl",
+                        "type": "biceps",
+                        "sets": [
+                            20,
+                            20,
+                            20
+                        ],
+                        "set_quantity": 3,
+                        "max": 25,
+                        "ten_max": 25,
+                        "modifier": 2.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Plank",
+                        "type": "abs",
+                        "sets": [
+                            95,
+                            95,
+                            95
+                        ],
+                        "set_quantity": 3,
+                        "max": 100,
+                        "ten_max": 140,
+                        "modifier": 0
+                    },
+                    false
+                ]
+            ]
+        },
+        {
+            "exercise_list": [
+                [
+                    {
+                        "name": "Machine Press",
+                        "type": "shoulder",
+                        "sets": [
+                            75,
+                            75,
+                            75
+                        ],
+                        "set_quantity": 3,
+                        "max": 110,
+                        "ten_max": 90,
+                        "modifier": 15
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Incline Dumbbell Bench",
+                        "type": "chest",
+                        "sets": [
+                            35,
+                            35,
+                            35
+                        ],
+                        "set_quantity": 3,
+                        "max": 40,
+                        "ten_max": 40,
+                        "modifier": 7.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Lateral",
+                        "type": "shoulder",
+                        "sets": [
+                            15,
+                            15,
+                            15
+                        ],
+                        "set_quantity": 3,
+                        "max": 15,
+                        "ten_max": 15,
+                        "modifier": 5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Front Raise",
+                        "type": "shoulder",
+                        "sets": [
+                            15,
+                            15,
+                            15
+                        ],
+                        "set_quantity": 3,
+                        "max": 20,
+                        "ten_max": 25,
+                        "modifier": -2.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Barbell Shrug",
+                        "type": "shoulder",
+                        "sets": [
+                            135,
+                            135,
+                            135
+                        ],
+                        "set_quantity": 3,
+                        "max": 180,
+                        "ten_max": 180,
+                        "modifier": 12.5
+                    },
+                    false
+                ]
+            ]
+        },
+        {
+            "exercise_list": [
+                [
+                    {
+                        "name": "Zercher Squat",
+                        "type": "leg",
+                        "sets": [
+                            115,
+                            115,
+                            115
+                        ],
+                        "set_quantity": 3,
+                        "max": 200,
+                        "ten_max": 170,
+                        "modifier": 0
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Split Squat",
+                        "type": "leg",
+                        "sets": [
+                            75,
+                            75,
+                            75
+                        ],
+                        "set_quantity": 3,
+                        "max": 100,
+                        "ten_max": 110,
+                        "modifier": 0
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Leg Extension",
+                        "type": "leg",
+                        "sets": [
+                            70,
+                            70,
+                            70
+                        ],
+                        "set_quantity": 3,
+                        "max": 90,
+                        "ten_max": 100,
+                        "modifier": 2.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Ham Curl",
+                        "type": "leg",
+                        "sets": [
+                            52.5,
+                            52.5,
+                            52.5
+                        ],
+                        "set_quantity": 3,
+                        "max": 90,
+                        "ten_max": 65,
+                        "modifier": 7.5
+                    },
+                    false
+                ],
+                [
+                    {
+                        "name": "Calf Raises",
+                        "type": "leg",
+                        "sets": [
+                            150,
+                            150,
+                            150
+                        ],
+                        "set_quantity": 3,
+                        "max": 90,
+                        "ten_max": 210,
+                        "modifier": 7.5
+                    },
+                    false
+                ]
+            ]
+        }
+    ],
+    "week_number": 1
+}

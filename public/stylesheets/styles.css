@@ -1,0 +1,35 @@
+table {
+  width: 30%;
+  margin: auto;
+  margin-top: 30px;
+  float: left;
+
+}
+
+
+
+body {
+
+  font-family: 'Montserrat', sans-serif;
+
+  font: 22px 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.wrapper {
+  margin: 20px
+}
+
+#days {
+  margin: auto;
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+caption {
+
+
+  caption-side: "top";
+}

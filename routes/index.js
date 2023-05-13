@@ -13,6 +13,7 @@ const router = express.Router();
 // Static Middleware
 app.use(cors())
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, '/public')))
 
 
 app.use(express.urlencoded({ extended: false }));
@@ -25,19 +26,20 @@ app.get('/', function (req, res, next) {
 
 app.get('/saved_workouts.json', function (req, res, next) {
   //res.render('index.html');
-  res.sendFile(path.join(__dirname, '/src/assets', 'saved_workouts.json'));
+  res.sendFile(path.join(__dirname, 'saved_workouts.json'));
 
 })
 
 
 app.post('/post-test', (req, res) => {
-  console.log("hooray")
-  //console.log('Got body:', req.body);
-  console.log("ye")
+  console.log('Got body:', req.body);
   res.sendStatus(200);
   var requested_val = JSON.stringify(req.body, null, 2);
 
-  fs.writeFileSync('saved_workouts.json', requested_val);
+  console.log(req.body)
+
+  fs.writeFileSync('../saved_workouts.json', requested_val)
+  //fs.writeFile('../saved_workouts.json', requested_val);
 
 });
 
