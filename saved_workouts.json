@@ -21,14 +21,14 @@
             "name": "Barbell Hold",
             "type": "back",
             "sets": [
-              145,
-              145,
-              145
+              130,
+              130,
+              130
             ],
             "set_quantity": 3,
             "max": 150,
             "ten_max": 170,
-            "modifier": 30
+            "modifier": 15
           },
           false
         ],
@@ -53,14 +53,14 @@
             "name": "Single Arm LP",
             "type": "back",
             "sets": [
-              47.5,
-              47.5,
-              47.5
+              52.5,
+              52.5,
+              52.5
             ],
             "set_quantity": 3,
             "max": 100,
             "ten_max": 60,
-            "modifier": 7.5
+            "modifier": 12.5
           },
           false
         ],
@@ -83,7 +83,7 @@
         [
           {
             "name": "Wrist Curl",
-            "type": "leg",
+            "type": "forearm",
             "sets": [
               10,
               10,
@@ -101,14 +101,14 @@
             "name": "Reverse Wrist Curl",
             "type": "forearm",
             "sets": [
-              7.5,
-              7.5,
-              7.5
+              10,
+              10,
+              10
             ],
             "set_quantity": 3,
             "max": 90,
             "ten_max": 12.5,
-            "modifier": 0
+            "modifier": 2.5
           },
           false
         ]
@@ -182,7 +182,7 @@
         [
           {
             "name": "One Arm Tricep Pushdown",
-            "type": "chest",
+            "type": "tricep",
             "sets": [
               20,
               20,
@@ -218,7 +218,7 @@
         [
           {
             "name": "Competition Squat",
-            "type": "leg",
+            "type": "quad",
             "sets": [
               152.5,
               137.5
@@ -250,7 +250,7 @@
         [
           {
             "name": "Leg Press",
-            "type": "leg",
+            "type": "quad",
             "sets": [
               190,
               190,
@@ -266,7 +266,7 @@
         [
           {
             "name": "Leg Extension",
-            "type": "leg",
+            "type": "quad",
             "sets": [
               70,
               70,
@@ -282,7 +282,7 @@
         [
           {
             "name": "Ham Curl",
-            "type": "leg",
+            "type": "hamstring",
             "sets": [
               65,
               65,
@@ -298,7 +298,7 @@
         [
           {
             "name": "Deep DB Bench",
-            "type": "leg",
+            "type": "chest",
             "sets": [
               35,
               35,
@@ -315,7 +315,7 @@
         [
           {
             "name": "Calf Raises",
-            "type": "leg",
+            "type": "calf",
             "sets": [
               195,
               195,
@@ -354,14 +354,14 @@
             "name": "Single Arm LP",
             "type": "back",
             "sets": [
-              47.5,
-              47.5,
-              47.5
+              52.5,
+              52.5,
+              52.5
             ],
             "set_quantity": 3,
             "max": 100,
             "ten_max": 60,
-            "modifier": 7.5
+            "modifier": 12.5
           },
           false
         ],
@@ -384,7 +384,7 @@
         [
           {
             "name": "Rear Delt Raise",
-            "type": "shoulder",
+            "type": "side delt",
             "sets": [
               17.5,
               17.5,
@@ -438,7 +438,7 @@
         [
           {
             "name": "Machine Press",
-            "type": "shoulder",
+            "type": "front delt",
             "sets": [
               77.5,
               77.5,
@@ -474,6 +474,7 @@
             "sets": [
               65,
               65,
+              65,
               65
             ],
             "set_quantity": 4,
@@ -486,7 +487,7 @@
         [
           {
             "name": "Lateral",
-            "type": "shoulder",
+            "type": "side delt",
             "sets": [
               17.5,
               17.5,
@@ -502,7 +503,7 @@
         [
           {
             "name": "Rear Delt Raise",
-            "type": "shoulder",
+            "type": "side delt",
             "sets": [
               17.5,
               17.5,
@@ -518,7 +519,7 @@
         [
           {
             "name": "Front Raise",
-            "type": "shoulder",
+            "type": "front delt",
             "sets": [
               15,
               15,
@@ -534,8 +535,9 @@
         [
           {
             "name": "Barbell Shrug",
-            "type": "shoulder",
+            "type": "traps",
             "sets": [
+              150,
               150,
               150,
               150
@@ -554,7 +556,7 @@
         [
           {
             "name": "Zercher Squat",
-            "type": "leg",
+            "type": "quad",
             "sets": [
               110,
               110,
@@ -570,7 +572,7 @@
         [
           {
             "name": "Romanian Dead",
-            "type": "leg",
+            "type": "hamstring",
             "sets": [
               130,
               130,
@@ -586,7 +588,7 @@
         [
           {
             "name": "Split Squat",
-            "type": "leg",
+            "type": "quad",
             "sets": [
               75,
               75
@@ -601,7 +603,7 @@
         [
           {
             "name": "Ham Curl",
-            "type": "leg",
+            "type": "hamstring",
             "sets": [
               65,
               65,
@@ -617,8 +619,9 @@
         [
           {
             "name": "Calf Raises",
-            "type": "leg",
+            "type": "calf",
             "sets": [
+              195,
               195,
               195,
               195
@@ -627,6 +630,60 @@
             "max": 90,
             "ten_max": 210,
             "modifier": 52.5
+          },
+          false
+        ]
+      ]
+    },
+    {
+      "exercise_list": [
+        [
+          {
+            "name": "Dumbbell Flyes",
+            "type": "chest",
+            "sets": [
+              7.5,
+              7.5,
+              7.5
+            ],
+            "set_quantity": 3,
+            "max": 20,
+            "ten_max": 10,
+            "modifier": -2.5
+          },
+          false
+        ],
+        [
+          {
+            "name": "Hanging Leg Raises",
+            "type": "abs",
+            "sets": [
+              12.5,
+              12.5,
+              12.5
+            ],
+            "set_quantity": 3,
+            "max": 20,
+            "ten_max": 20,
+            "modifier": 0
+          },
+          false
+        ],
+        [
+          {
+            "name": "Reaching Situps",
+            "type": "abs",
+            "sets": [
+              30,
+              30,
+              30,
+              30,
+              30
+            ],
+            "set_quantity": 5,
+            "max": 0,
+            "ten_max": 30,
+            "modifier": 10
           },
           false
         ]
