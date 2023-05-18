@@ -291,7 +291,7 @@
             "set_quantity": 3,
             "max": 90,
             "ten_max": 65,
-            "modifier": 20
+            "modifier": 25
           },
           false
         ],
@@ -325,7 +325,7 @@
             "set_quantity": 4,
             "max": 90,
             "ten_max": 210,
-            "modifier": 52.5
+            "modifier": 62.5
           },
           false
         ]
@@ -574,14 +574,14 @@
             "name": "Romanian Dead",
             "type": "hamstring",
             "sets": [
-              130,
-              130,
-              130
+              140,
+              140,
+              140
             ],
             "set_quantity": 3,
             "max": 100,
             "ten_max": 170,
-            "modifier": 15
+            "modifier": 25
           },
           false
         ],
@@ -590,13 +590,13 @@
             "name": "Split Squat",
             "type": "quad",
             "sets": [
-              75,
-              75
+              77.5,
+              77.5
             ],
             "set_quantity": 2,
             "max": 90,
             "ten_max": 80,
-            "modifier": 20
+            "modifier": 22.5
           },
           false
         ],
@@ -612,7 +612,7 @@
             "set_quantity": 3,
             "max": 90,
             "ten_max": 65,
-            "modifier": 20
+            "modifier": 25
           },
           false
         ],
@@ -629,7 +629,7 @@
             "set_quantity": 4,
             "max": 90,
             "ten_max": 210,
-            "modifier": 52.5
+            "modifier": 62.5
           },
           false
         ]
@@ -642,14 +642,14 @@
             "name": "Dumbbell Flyes",
             "type": "chest",
             "sets": [
-              7.5,
-              7.5,
-              7.5
+              5,
+              5,
+              5
             ],
             "set_quantity": 3,
             "max": 20,
             "ten_max": 10,
-            "modifier": -2.5
+            "modifier": 2.5
           },
           false
         ],
