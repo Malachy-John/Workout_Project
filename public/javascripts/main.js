@@ -1,4 +1,5 @@
-
+let currentPort = window.location.port;
+console.log(currentPort)
 
 
 
