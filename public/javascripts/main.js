@@ -558,7 +558,7 @@ function postAjax(data) {
         success: function (result) {
             console.log("Ajax is working")
             console.log(result);
-            //getArray();
+            getArray2();
         },
         error: function (result, status) {
             console.log("not quite")
