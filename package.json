@@ -7,6 +7,6 @@
   "license": "MIT",
   "dependencies": {},
   "scripts": {
-    "start": "node /routes/index.js"
+    "start": "node index.js"
   }
 }
