@@ -549,8 +549,8 @@ function postAjax(data) {
 
 
     $.ajax({
-        url: "https://workout-log-3n2u.onrender/post-test",
-        //url: "http://localhost:4000/post-test",
+        //url: "https://workout-log-3n2u.onrender/post-test",
+        url: "http://localhost:7900/post-test",
         data: data,
         contentType: "application/json",
 
