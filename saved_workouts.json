@@ -21,9 +21,9 @@
             "name": "Barbell Hold",
             "type": "back",
             "sets": [
-              130,
-              130,
-              130
+              137.5,
+              137.5,
+              137.5
             ],
             "set_quantity": 3,
             "max": 150,
@@ -284,9 +284,9 @@
             "name": "Ham Curl",
             "type": "hamstring",
             "sets": [
-              65,
-              65,
-              65
+              70,
+              70,
+              70
             ],
             "set_quantity": 3,
             "max": 90,
@@ -317,10 +317,10 @@
             "name": "Calf Raises",
             "type": "calf",
             "sets": [
-              195,
-              195,
-              195,
-              195
+              205,
+              205,
+              205,
+              205
             ],
             "set_quantity": 4,
             "max": 90,
@@ -605,9 +605,9 @@
             "name": "Ham Curl",
             "type": "hamstring",
             "sets": [
-              65,
-              65,
-              65
+              70,
+              70,
+              70
             ],
             "set_quantity": 3,
             "max": 90,
@@ -621,10 +621,10 @@
             "name": "Calf Raises",
             "type": "calf",
             "sets": [
-              195,
-              195,
-              195,
-              195
+              205,
+              205,
+              205,
+              205
             ],
             "set_quantity": 4,
             "max": 90,
@@ -642,9 +642,9 @@
             "name": "Dumbbell Flyes",
             "type": "chest",
             "sets": [
-              5,
-              5,
-              5
+              10,
+              10,
+              10
             ],
             "set_quantity": 3,
             "max": 20,
@@ -658,14 +658,14 @@
             "name": "Hanging Leg Raises",
             "type": "abs",
             "sets": [
-              12.5,
-              12.5,
-              12.5
+              15,
+              15,
+              15
             ],
             "set_quantity": 3,
             "max": 20,
             "ten_max": 20,
-            "modifier": 0
+            "modifier": 2.5
           },
           false
         ],
@@ -674,16 +674,16 @@
             "name": "Reaching Situps",
             "type": "abs",
             "sets": [
-              30,
-              30,
-              30,
-              30,
-              30
+              20,
+              20,
+              20,
+              20,
+              20
             ],
             "set_quantity": 5,
             "max": 0,
             "ten_max": 30,
-            "modifier": 10
+            "modifier": 0
           },
           false
         ]

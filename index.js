@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, '/public')))
 
 
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -37,7 +38,7 @@ app.post('/post-test', (req, res) => {
   res.sendStatus(200);
   var requested_val = JSON.stringify(req.body, null, 2);
 
-  console.log(req.body)
+  //console.log(req.body)
 
   fs.writeFileSync('../saved_workouts.json', requested_val)
   //fs.writeFile('../saved_workouts.json', requested_val);
