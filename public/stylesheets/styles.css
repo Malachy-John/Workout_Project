@@ -6,6 +6,14 @@ table {
 
 }
 
+button {
+
+  font-style: italic;
+}
+
+.btn btn-primary btn-lg btn-block {
+  font-style: oblique;
+}
 
 
 body {
@@ -22,8 +30,7 @@ body {
 }
 
 #days {
-  margin: auto;
-  display: flex;
+
   padding: 10px;
   flex-wrap: wrap;
 }

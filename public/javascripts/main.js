@@ -156,22 +156,61 @@ function appendValues(workout) {
     //let un_li = document.createElement("ul")
 
 
-
+    let div = document.createElement("div");
     let table = document.createElement("table")
     let caption = table.createCaption();
-
+    let button = document.createElement("button");
 
 
     let index = data.workout_list.indexOf(workout);
     console.log(index)
 
-    caption.innerHTML = `Day ${index + 1}`
+    caption.innerHTML = `Day ${index + 1}`;
+    button.setAttribute("data-target", `table-${index + 1}`);
+    button.setAttribute("data-toggle", "collapse");
+    button.setAttribute("id", `button-${index + 1}`);
+    button.innerText = "Collapse";
+
+    div.className = "container-fluid";
+    //div.style.backgroundColor = "red";
+    button.className = "btn btn-secondary btn-lg w-100";
+
+    console.log(button.getAttribute("id"))
+    //div.appendChild(button)
+    table.id = `table-${index + 1}`;
+
     caption.style.captionSide = "top";
 
 
-    table.className = "table table-dark table-striped"
+    table.className = "collapse show table table-dark table-striped"
 
-    exercises.appendChild(table)
+    button.addEventListener("click", () => {
+        //  button.getAttribute("data-target");
+
+        if (table.style.display == "table") {
+            table.style.display = "none";
+            button.innerText = `Uncollapse Day ${index + 1}`;
+        } else {
+            table.style.display = "table";
+            button.innerText = `Collapse Day ${index + 1}`;
+        }
+        console.log(table.id)
+        $(table.id).collapse({
+            toggle: true
+        })
+        //$('.collapse').collapse()
+
+        //$(table.id).collapse('toggle');
+
+    }
+    );
+
+
+    exercises.appendChild(div);
+    div.appendChild(button);
+    div.appendChild(table)
+    //exercises.appendChild(button)
+
     let thead = table.createTHead();
     let row = table.insertRow();
 
@@ -244,42 +283,60 @@ function appendValues(workout) {
 
         //this ups weight and makes it harder
         cell = row.insertCell();
-        text = document.createElement("button");
-        text.innerHTML = "+"
-        text.addEventListener("click", () => modifySets(element, true, true))
-        text.className = "btn btn-secondary btn-sm"
-        cell.appendChild(text);
+        let text_weight_plus = document.createElement("button");
+        text_weight_plus.innerHTML = "+"
+        text_weight_plus.addEventListener("click", () => modifySets(element, true, true, text_weight_plus))
+        text_weight_plus.className = "btn btn-secondary btn-lg"
+        cell.appendChild(text_weight_plus);
         cell = row.insertCell();
-        text = document.createElement("button");
 
-        text.innerHTML = "-"
-        text.addEventListener("click", () => modifySets(element, false, true))
+        let text_weight_neg = document.createElement("button");
+
+        text_weight_neg.innerHTML = "-"
+        text_weight_neg.addEventListener("click", () => modifySets(element, false, true, text_weight_neg))
 
 
-        cell.appendChild(text);
-        text.className = "btn btn-secondary btn-sm"
+        cell.appendChild(text_weight_neg);
+        text_weight_neg.className = "btn btn-secondary btn-lg"
 
 
         //these add sets and remove them
         cell = row.insertCell();
-        text = document.createElement("button");
-        text.innerHTML = "+"
-        text.addEventListener("click", () => modifySets(element, true, false))
-        text.className = "btn btn-dark btn-sm"
-        cell.appendChild(text);
+        let text_sets_plus = document.createElement("button");
+        text_sets_plus.innerHTML = "+"
+        text_sets_plus.addEventListener("click", () => modifySets(element, true, false, text_sets_plus))
+
+        text_sets_plus.className = "btn btn-dark btn-lg"
+
+
+        cell.appendChild(text_sets_plus);
+
         cell = row.insertCell();
-        text = document.createElement("button");
-
-        text.innerHTML = "-"
-        text.addEventListener("click", () => modifySets(element, false, false))
 
 
-        cell.appendChild(text);
-        text.className = "btn btn-dark btn-sm"
+        let text_sets_neg = document.createElement("button");
+
+        text_sets_neg.innerHTML = "-"
+        text_sets_neg.addEventListener("click", () => modifySets(element, false, false, text_sets_neg))
+
+
+        cell.appendChild(text_sets_neg);
+        text_sets_neg.className = "btn btn-dark btn-lg"
 
 
 
         table.prepend(caption)
+
+
+
+        if (table.style.display == "table") {
+            table.style.display = "table";
+            button.innerText = `Collapse Day ${index + 1}`;
+        } else {
+            table.style.display = "table";
+            button.innerText = `Collapse Day ${index + 1}`;
+        }
+
 
 
     });
@@ -295,16 +352,27 @@ function appendValues(workout) {
 
 //this adds weight to the tertiary lifts/or takes it away.
 //adding 2.5 to a lift will add it to all lifts of same name.
-function modifySets(exercise, isPositive, isModifier) {
+function modifySets(exercise, isPositive, isModifier, text) {
     let value;
     let mod;
+    let addition = 2.5;
 
-    navigator.vibrate(200);
+
+    //console.log(exercise[0].innerHTML);
+    //navigator.vibrate(200);
 
     if (isModifier) {
+        if (!Number(parseInt(text.innerHTML))) {
+            text.innerHTML = 0;
+        }
+        //text.innerHTML = 0
+        //addition += 2.5;
+
         console.log("weight")
         value = "modifier";
         mod = 2.5;
+        text.innerHTML = parseFloat(text.innerHTML) + addition;
+
     } else {
         console.log("set")
         value = "set_quantity";
@@ -594,6 +662,10 @@ function getArray2() {
         for (let i = 0; i < data.workout_list.length; i++) {
             calculateDay(data.workout_list[i], 1);
         }
+
+
+        findTotalSets(data);
+
     });
 
 
