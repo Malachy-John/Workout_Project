@@ -21,14 +21,14 @@
             "name": "Barbell Hold",
             "type": "back",
             "sets": [
-              140,
-              140,
-              140
+              135,
+              135,
+              135
             ],
             "set_quantity": 3,
             "max": 150,
             "ten_max": 170,
-            "modifier": 20
+            "modifier": 30
           },
           false
         ],

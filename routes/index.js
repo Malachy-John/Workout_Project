@@ -40,7 +40,7 @@ app.post('/post-test', (req, res) => {
   console.log(requested_val)
   console.log("swe")
 
-  fs.writeFileSync('saved_workouts.json', requested_val)
+  fs.writeFileSync('routes/saved_workouts.json', requested_val)
   //fs.writeFile('../saved_workouts.json', requested_val);
 
 });
