@@ -1,8 +1,8 @@
-//let currentPort = window.location.hostname;
-//console.log(currentPort)
+let currentPort = window.location.port;
+console.log(currentPort)
 
 
-let currentPort = document.location.host;
+//let currentPort = document.location.host;
 
 console.log(currentPort);
 
@@ -555,7 +555,7 @@ function postAjax(data) {
 
 
     $.ajax({
-        url: "/post-test",
+        url: "../post-test",
         //url: "http://localhost:4000/post-test",
         data: data,
         contentType: "application/json",
