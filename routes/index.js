@@ -3,7 +3,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const PORT = process.env.PORT || 4000;
+const PORT = 4000;
 const bodyParser = require('body-parser');
 var cors = require('cors')
 const fs = require('fs')
@@ -36,7 +36,7 @@ app.post('/post-test', (req, res) => {
   res.sendStatus(200);
   var requested_val = JSON.stringify(req.body, null, 2);
 
-  console.log(req.body)
+  console.log(requested_val)
 
   fs.writeFileSync('../saved_workouts.json', requested_val)
   //fs.writeFile('../saved_workouts.json', requested_val);

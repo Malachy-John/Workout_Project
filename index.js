@@ -4,7 +4,6 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 4000;
-//const PORT = 7900;
 const bodyParser = require('body-parser');
 var cors = require('cors')
 const fs = require('fs')
@@ -15,7 +14,6 @@ const router = express.Router();
 app.use(cors())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, '/public')))
-
 
 
 app.use(express.urlencoded({ extended: false }));
@@ -38,7 +36,7 @@ app.post('/post-test', (req, res) => {
   res.sendStatus(200);
   var requested_val = JSON.stringify(req.body, null, 2);
 
-  //console.log(req.body)
+  console.log(req.body)
 
   fs.writeFileSync('../saved_workouts.json', requested_val)
   //fs.writeFile('../saved_workouts.json', requested_val);
@@ -56,11 +54,6 @@ app.listen(PORT, function (err) {
   console.log("Server listening on PORT", PORT);
 });
 
-
-app.listen(PORT, function (err) {
-  if (err) console.log(err);
-  console.log("Server listening on PORT", PORT);
-});
 
 
 

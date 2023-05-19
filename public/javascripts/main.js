@@ -1,16 +1,5 @@
-let currentPort = window.location.port;
-console.log(currentPort)
 
-
-//let currentPort = document.location.host;
-
-console.log(currentPort);
-
-
-
-
-
-let data;
+let data = "";
 class Week {
     constructor(workout_list, week_number) {
         this.workout_list = workout_list
