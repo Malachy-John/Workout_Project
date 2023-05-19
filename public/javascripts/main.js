@@ -547,10 +547,10 @@ function postAjax(data) {
 
     data = JSON.stringify(data)
 
-    
-    $.ajax({
 
-        url: "http://localhost:4000/post-test",
+    $.ajax({
+        url: "https://workout-log-3n2u.onrender/post-test",
+        //url: "http://localhost:4000/post-test",
         data: data,
         contentType: "application/json",
 
