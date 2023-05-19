@@ -3,7 +3,8 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const PORT = 4000;
+//const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const bodyParser = require('body-parser');
 var cors = require('cors')
 const fs = require('fs')
@@ -39,7 +40,7 @@ app.post('/post-test', (req, res) => {
   console.log(requested_val)
   console.log("swe")
 
-  fs.writeFileSync('/saved_workouts.json', requested_val)
+  fs.writeFileSync('saved_workouts.json', requested_val)
   //fs.writeFile('../saved_workouts.json', requested_val);
 
 });

@@ -21,9 +21,9 @@
             "name": "Barbell Hold",
             "type": "back",
             "sets": [
-              145,
-              145,
-              145
+              140,
+              140,
+              140
             ],
             "set_quantity": 3,
             "max": 150,
