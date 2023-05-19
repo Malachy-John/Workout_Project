@@ -133,6 +133,9 @@ let cycle_1 = {
 function calculateDay(workout, week_no) {
 
 
+    console.log("we have made it");
+
+    console.log(workout)
 
 
 
@@ -495,7 +498,7 @@ var text = e.options[e.selectedIndex].text;
 submit.addEventListener("click", () => callWorkouts(data, $('#select').val()))
 saver.disabled = true;
 saver.addEventListener("click", () => postAjax(data))
-download.addEventListener("click", () => getArray());
+download.addEventListener("click", () => getArray2());
 
 
 function clearSets(data) {
@@ -545,8 +548,8 @@ function postAjax(data) {
 
     $.ajax({
         //url: "../post-test",
+        //url: "/post-test",
         url: "/post-test",
-        //url: "http://localhost:4000/post-test",
         data: data,
         contentType: "application/json",
 
@@ -570,6 +573,32 @@ function clearWorkout() {
     }
 }
 
+function getArray2() {
+
+
+
+    saver.disabled = false;
+    clearWorkout()
+
+    $.getJSON("/saved_workouts.json", function (result) {
+
+        console.log(result["workout_list"])
+
+
+        data = result;
+
+        clearSets(data)
+
+        for (let i = 0; i < data.workout_list.length; i++) {
+            calculateDay(data.workout_list[i], 1);
+        }
+    });
+
+
+
+}
+
+
 //will need to clear out here...
 async function getArray() {
     //check here for response error ??
@@ -579,11 +608,12 @@ async function getArray() {
     clearWorkout()
 
 
-    const response = await fetch("/saved_workouts.json")
+    const response = await fetch("../saved_workouts.json")
 
     data = await response.json();
     //console.log(data);
 
+    console.log(data)
     clearSets(data)
 
 

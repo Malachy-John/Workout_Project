@@ -37,8 +37,9 @@ app.post('/post-test', (req, res) => {
   var requested_val = JSON.stringify(req.body, null, 2);
 
   console.log(requested_val)
+  console.log("squeak")
 
-  fs.writeFileSync('../saved_workouts.json', requested_val)
+  fs.writeFileSync('saved_workouts.json', requested_val)
   //fs.writeFile('../saved_workouts.json', requested_val);
 
 });
