@@ -299,6 +299,8 @@ function modifySets(exercise, isPositive, isModifier) {
     let value;
     let mod;
 
+    navigator.vibrate(200);
+
     if (isModifier) {
         console.log("weight")
         value = "modifier";
