@@ -579,7 +579,7 @@ async function getArray() {
     clearWorkout()
 
 
-    const response = await fetch("../saved_workouts.json")
+    const response = await fetch("/saved_workouts.json")
 
     data = await response.json();
     //console.log(data);
