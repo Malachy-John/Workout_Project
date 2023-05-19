@@ -40,7 +40,7 @@ app.post('/post-test', (req, res) => {
 
   console.log(req.body)
 
-  fs.writeFile('saved_workouts.json', requested_val);
+  fs.writeFile('/routes/saved_workouts.json', requested_val);
   //fs.writeFile('../saved_workouts.json', requested_val);
 
 });
