@@ -545,7 +545,8 @@ function postAjax(data) {
 
     $.ajax({
         //url: "../post-test",
-        url: "http://localhost:4000/post-test",
+        url: "workoutproject-production.up.railway.app/post-test"
+        //url: "http://localhost:4000/post-test",
         data: data,
         contentType: "application/json",
 
