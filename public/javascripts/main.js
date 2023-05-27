@@ -644,7 +644,7 @@ function postAjax(data) {
     $.ajax({
         //url: "../post-test",
         //url: "/post-test",
-        url: "http://localhost:4000/post-test",
+        url: "/post-test",
         data: data,
         contentType: "application/json",
 
@@ -682,7 +682,7 @@ function getArray2(week_select) {
     week_num_text.innerText = `Week ${week_select}`;
 
 
-    $.getJSON("http://localhost:4000/saved_workouts.json", function (result) {
+    $.getJSON("/saved_workouts.json", function (result) {
 
         console.log(result["workout_list"])
 
