@@ -6,9 +6,11 @@ table {
 
 }
 
+
+
 button {
 
-  font-style: italic;
+  margin: 5px;
 }
 
 .btn btn-primary btn-lg btn-block {

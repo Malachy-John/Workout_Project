@@ -171,11 +171,12 @@ function appendValues(workout) {
     button.setAttribute("id", `button-${index + 1}`);
     button.innerText = "Collapse";
 
+
     div.className = "container-fluid";
     //div.style.backgroundColor = "red";
-    button.className = "btn btn-secondary btn-lg w-100";
+    button.className = "btn btn-secondary btn-lg";
 
-    console.log(button.getAttribute("id"))
+
     //div.appendChild(button)
     table.id = `table-${index + 1}`;
 
@@ -205,9 +206,12 @@ function appendValues(workout) {
     }
     );
 
+    let buttons_hold = document.getElementById("buttons-hold");
+
+
 
     exercises.appendChild(div);
-    div.appendChild(button);
+    buttons_hold.appendChild(button);
     div.appendChild(table)
     //exercises.appendChild(button)
 
@@ -261,12 +265,15 @@ function appendValues(workout) {
 
         let row = table.insertRow();
         let cell = row.insertCell();
-        let text = document.createTextNode(element[0].name);
+        //to display the name of the exercise and the reps per set
+        let text = document.createTextNode(`${element[0].name}: `);
+
+        console.log(element[0].reps_per_set)
         cell.appendChild(text);
 
         element[0].sets.forEach(e => {
             let cell = row.insertCell();
-            let text = document.createTextNode(e);
+            let text = document.createTextNode(`${e} x ${element[0].reps_per_set}`);
             cell.appendChild(text);
         })
 
@@ -327,14 +334,18 @@ function appendValues(workout) {
 
         table.prepend(caption)
 
-
+        button.style.margin = "10px";
 
         if (table.style.display == "table") {
             table.style.display = "table";
             button.innerText = `Collapse Day ${index + 1}`;
+
+            button.style.margin = "10px";
         } else {
             table.style.display = "table";
             button.innerText = `Collapse Day ${index + 1}`;
+
+            //button.style.margin = "10px";
         }
 
 
@@ -434,12 +445,11 @@ function calculateExerciseTier(exercise, week_no) {
 
 function calculatePrimaryLift(exercise, week_no) {
     let sets = 2
-    let reps = 10
     let multiplier = 0.675
     let value = 0
 
     let week = week_no
-    console.log(week_no)
+    //console.log(week_no)
 
     if (week == 2) {
         multiplier = 0.7
@@ -479,7 +489,7 @@ function calculatePrimaryLift(exercise, week_no) {
 
             exercise.sets.push(value)
         } else {
-            value = RoundTo(top_set * 0.9)
+            value = RoundTo(top_set * 0.85)
             exercise.sets.push(value)
         }
     }
@@ -488,12 +498,7 @@ function calculatePrimaryLift(exercise, week_no) {
 
 }
 
-function calculateSecondaryLift(exercise) {
 
-    if (exercise.type === "back") {
-        console.log("Sets will be 5")
-    }
-}
 
 function calculateTertiaryLift(exercise) {
 
@@ -552,7 +557,7 @@ const data_1 = JSON.stringify(Week_1)
 
 
 let saver = document.getElementById("save.button");
-let submit = document.getElementById("change");
+//let submit = document.getElementById("change");
 let download = document.getElementById("download_button")
 var e = document.getElementById("select");
 var value = e.options[e.selectedIndex].value;
@@ -565,12 +570,12 @@ var text = e.options[e.selectedIndex].text;
 //console.log($('#select').val());
 
 
-submit.addEventListener("click", () => callWorkouts(data, $('#select').val()))
+//submit.addEventListener("click", () => callWorkouts(data, $('#select').val()))
 saver.disabled = true;
 saver.addEventListener("click", () => postAjax(data))
-download.addEventListener("click", () => getArray2());
+download.addEventListener("click", () => getArray2($('#select').val()));
 
-
+//this resets the sets on screen for the user, otherwise they will become additive with each refresh of the data.
 function clearSets(data) {
     //console.log("yes")
     for (let i = 0; i < data.workout_list.length; i++) {
@@ -587,6 +592,26 @@ function clearSets(data) {
 
     }
 }
+
+//this will add a key to the exercise in the list
+function addKey(data) {
+    //console.log("yes")
+    for (let i = 0; i < data.workout_list.length; i++) {
+        //console.log(data.workout_list[i].exercise_list[0])
+
+        for (let j = 0; j < data.workout_list[i].exercise_list.length; j++) {
+
+            //we might want to use this functionality in the future for CRUD application!
+            //console.log(data.workout_list[i].exercise_list[j][0]["sets"]);
+            data.workout_list[i].exercise_list[j][0]["reps_per_set"] = 10
+            console.log("yes this worked")
+
+        }
+
+
+    }
+}
+
 
 
 function callWorkouts(data, week_no) {
@@ -619,7 +644,7 @@ function postAjax(data) {
     $.ajax({
         //url: "../post-test",
         //url: "/post-test",
-        url: "/post-test",
+        url: "http://localhost:4000/post-test",
         data: data,
         contentType: "application/json",
 
@@ -628,7 +653,7 @@ function postAjax(data) {
         success: function (result) {
             console.log("Ajax is working")
             console.log(result);
-            getArray2();
+            getArray2($('#select').val());
         },
         error: function (result, status) {
             console.log("not quite")
@@ -643,28 +668,45 @@ function clearWorkout() {
     }
 }
 
-function getArray2() {
+function getArray2(week_select) {
 
 
+    //document.getElementById("week-number").innerHTML = `Week ${week_no}`;
 
+    let week_num_text = document.getElementById("week-number");
+    console.log("Your value is: " + week_select);
     saver.disabled = false;
-    clearWorkout()
+    clearWorkout();
+    let buttons_hold = document.getElementById("buttons-hold");
 
-    $.getJSON("/saved_workouts.json", function (result) {
+    week_num_text.innerText = `Week ${week_select}`;
+
+
+    $.getJSON("http://localhost:4000/saved_workouts.json", function (result) {
 
         console.log(result["workout_list"])
 
 
         data = result;
 
+
         clearSets(data)
 
+        while (buttons_hold.firstChild) {
+            buttons_hold.removeChild(buttons_hold.firstChild);
+        }
+
         for (let i = 0; i < data.workout_list.length; i++) {
-            calculateDay(data.workout_list[i], 1);
+            calculateDay(data.workout_list[i], week_select);
         }
 
 
         findTotalSets(data);
+
+        //this is optional, but allows us to add a key to the exercise, if required
+        addKey(data);
+
+
 
     });
 
@@ -673,30 +715,7 @@ function getArray2() {
 }
 
 
-//will need to clear out here...
-async function getArray() {
-    //check here for response error ??
 
-
-    saver.disabled = false;
-    clearWorkout()
-
-
-    const response = await fetch("../saved_workouts.json")
-
-    data = await response.json();
-    //console.log(data);
-
-    console.log(data)
-    clearSets(data)
-
-
-    for (let i = 0; i < data.workout_list.length; i++) {
-        calculateDay(data.workout_list[i], 1)
-    }
-    findTotalSets(data);
-
-}
 
 
 
